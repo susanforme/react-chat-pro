@@ -18,7 +18,9 @@ const ChatWindow: React.FC<ChatWindowProps> = ({
 }) => {
   const classList = ['sc-chat-window', isOpen ? 'opened' : 'closed', className];
   return (
-    <UserHeadImgContext.Provider value={headImg || require('./assets/chat-icon.svg')}>
+    <UserHeadImgContext.Provider
+      value={headImg || require('./assets/chat-icon.svg')}
+    >
       <div className={classList.join(' ')}>
         {showHeader && (
           <Header

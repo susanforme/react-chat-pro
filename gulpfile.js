@@ -15,9 +15,15 @@ function tsTask() {
 function copyCssTask() {
   return gulp.src('src/**/*.css').pipe(gulp.dest('dist'));
 }
+function copyAssets() {
+  return gulp.src('src/assets').pipe(gulp.dest('dist'));
+}
 
 function copyDTs() {
   return gulp.src('./dist/src/**/*.*').pipe(gulp.dest('dist'));
+}
+function copyPackage() {
+  return gulp.src('package.json').pipe(gulp.dest('dist'));
 }
 
 function cleanD(cb) {
@@ -25,7 +31,7 @@ function cleanD(cb) {
 }
 
 module.exports = {
-  build: gulp.parallel(tsTask, copyCssTask),
+  build: gulp.parallel(tsTask, copyCssTask, copyAssets, copyPackage),
   copyDTs,
   cleanD,
 };

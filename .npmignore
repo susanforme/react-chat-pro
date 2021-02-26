@@ -5,3 +5,4 @@ babel.config.js
 jsconfig.json
 yarn.lock
 src
+tsconfig.tsbuildinfo
