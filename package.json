@@ -1,15 +1,14 @@
 {
-  "name": "test",
+  "name": "react-chat-pro",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build && tsc --emitDeclarationOnly && gulp copyDTs",
-    "build:types": "tsc --emitDeclarationOnly",
-    "copyts": "gulp copyDTs"
+    "build": "gulp build && tsc --emitDeclarationOnly && gulp copyDTs &&gulp cleanD"
   },
   "keywords": [],
-  "author": "",
+  "author": "rzc307853639@gmail.com",
+  "homepage": "https://github.com/susanforme/vue-iconfont-antdesign#readme",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.13.1",
@@ -24,6 +23,7 @@
     "@types/react-linkify": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.2",
+    "del": "^6.0.0",
     "eslint": "^7.20.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
