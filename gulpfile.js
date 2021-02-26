@@ -16,7 +16,7 @@ function copyCssTask() {
   return gulp.src('src/**/*.css').pipe(gulp.dest('dist'));
 }
 function copyAssets() {
-  return gulp.src('src/assets').pipe(gulp.dest('dist'));
+  return gulp.src('src/assets/**/*').pipe(gulp.dest('dist/assets'));
 }
 
 function copyDTs() {
@@ -25,13 +25,22 @@ function copyDTs() {
 function copyPackage() {
   return gulp.src('package.json').pipe(gulp.dest('dist'));
 }
+function copyREADME() {
+  return gulp.src('README.md').pipe(gulp.dest('dist'));
+}
 
 function cleanD(cb) {
   return del(['dist/src', 'yarn-error.log'], cb);
 }
 
 module.exports = {
-  build: gulp.parallel(tsTask, copyCssTask, copyAssets, copyPackage),
+  build: gulp.parallel(
+    tsTask,
+    copyCssTask,
+    copyAssets,
+    copyPackage,
+    copyREADME
+  ),
   copyDTs,
   cleanD,
 };
