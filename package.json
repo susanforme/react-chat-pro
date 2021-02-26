@@ -8,7 +8,11 @@
   },
   "keywords": [],
   "author": "rzc307853639@gmail.com",
-  "homepage": "https://github.com/susanforme/vue-iconfont-antdesign#readme",
+  "homepage": "https://github.com/susanforme/react-chat-pro#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/susanforme/react-chat-pro.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.13.1",
